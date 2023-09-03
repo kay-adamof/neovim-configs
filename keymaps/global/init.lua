@@ -1,0 +1,2 @@
+MapLeader = " "
+AltLeader = ";"
