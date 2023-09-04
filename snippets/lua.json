@@ -1,0 +1,20 @@
+{
+  "local": {
+    "prefix": "l",
+    "body": [
+      "local ${0}"
+    ],
+    "description": "create a variable"
+  },
+  "table": {
+    "prefix": "lm",
+    "body": [
+      "local M = {}",
+      "",
+      "$1",
+      "",
+      "return M"
+    ],
+    "description": "Create Table"
+  }
+}

@@ -7,17 +7,6 @@ return {
 
   colorscheme = "catppuccin",
 
-
-  plugins = {
-    {
-      "catppuccin/nvim",
-      name = "catppuccin",
-      config = function()
-        require("catppuccin").setup {}
-      end,
-    },
-  },
-
   polish = function()
     local unmap = vim.keymap.del
     unmap("t", "<C-h>")
@@ -39,4 +28,3 @@ return {
     require "user.autocmds"
   end,
 }
-

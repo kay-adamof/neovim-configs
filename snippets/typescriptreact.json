@@ -1,0 +1,84 @@
+{
+  "Fragment": {
+    "prefix": [
+      "f<"
+    ],
+    "body": [
+      "<$1>",
+      "\t$2",
+      "</$1>"
+    ],
+    "description": "React Fragment"
+  },
+  "Metadata": {
+    "prefix": [
+      "metadata"
+    ],
+    "body": [
+      "import type { Metadata } from 'next'",
+      "",
+      "export const metadata: Metadata = {",
+      "\ttitle: '',",
+      "\tdescription: '',",
+      "}"
+    ],
+    "description": "React Fragment"
+  },
+  "Generate Metadata": {
+    "prefix": [
+      "nxgenmeta"
+    ],
+    "body": [
+      "${TM_DIRECTORY}",
+      "export ${2:async} function generateMetadata({ params }: { params: { ${1:array}: string } }) {",
+      "\tconst posts = getSortedPostsData()",
+      "\tconst { ${1:array} } = params",
+      "\tconst post = posts.find(post => post.id === ${1:array})",
+      "\tif (!post) {",
+      "\t\treturn {",
+      "\t\ttitle: 'Post Not Found'",
+      "\t\t}",
+      "\t}",
+      "\treturn {",
+      "\t\ttitle: post.title,",
+      "\t}",
+      "}"
+    ],
+    "description": "Generate a metadata for dynamic route"
+  },
+  "React Function Component": {
+    "prefix": "rfc2",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export const ${TM_DIRECTORY/^.+\\/(.*)$/${1:/pascalcase}/g}$1: React.FC<${TM_DIRECTORY/^.+\\/(.*)$/${1:/pascalcase}/g}$1Props> = function ({ $2 }) {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};",
+      "",
+      "type ${TM_DIRECTORY/^.+\\/(.*)$/${1:/pascalcase}/g}$1Props = { $2: $3 }",
+      ""
+    ],
+    "description": "Create a React Function Component"
+  },
+  "Static Site Generation": {
+    "prefix": "ssg",
+    "body": [
+      "export function generateStaticParams() {",
+      "\tconst posts = getSortedPostsData()",
+      "\treturn posts.map((post) => ({",
+      "\t\tpostId: post.id",
+      "\t}))",
+      "}"
+    ],
+    "description": "Create a React Function Component"
+  },
+  "Arguments of useTransition": {
+    "prefix": "useTransition",
+    "body": [
+      "const [isPending, startTransition] = "
+    ],
+    "description": "The basic array distructuring for useTransition"
+  }
+}
