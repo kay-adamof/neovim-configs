@@ -4,9 +4,6 @@ return {
       icons_enabled = true,
     },
   },
-  -- luasnip = {
-  --   vscode_snippet_paths = { "/Users/koichi/.config/nvim/lua/user/snippets" },
-  -- },
   colorscheme = "catppuccin",
 
   polish = function()
