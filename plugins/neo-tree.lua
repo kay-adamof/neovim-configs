@@ -64,6 +64,7 @@ return {
         ["R"] = "refresh",
         ["/"] = "noop",
         ["f"] = "noop",
+        ["F"] = "noop",
         -- ["<c-x>"] = "clear_filter",
         ["a"] = {
           "add",
