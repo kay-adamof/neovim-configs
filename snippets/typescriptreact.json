@@ -36,6 +36,11 @@
     ],
     "description": "Generate a metadata for dynamic route"
   },
+  "use client": {
+    "prefix": "uc",
+    "body": ["'use client'"],
+    "description": "Add 'use client' directive"
+  },
   "React Function Component": {
     "prefix": "rfc2",
     "body": [
