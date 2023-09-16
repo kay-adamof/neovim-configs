@@ -1,11 +1,19 @@
 {
   "Fragment": {
-    "prefix": ["f<"],
-    "body": ["<$1>", "\t$2", "</$1>"],
+    "prefix": [
+      "fragment"
+    ],
+    "body": [
+      "<$1>",
+      "\t$2",
+      "</$1>"
+    ],
     "description": "React Fragment"
   },
   "Metadata": {
-    "prefix": ["metadata"],
+    "prefix": [
+      "metadata"
+    ],
     "body": [
       "import type { Metadata } from 'next'",
       "",
@@ -17,7 +25,9 @@
     "description": "React Fragment"
   },
   "Generate Metadata": {
-    "prefix": ["nxgenmeta"],
+    "prefix": [
+      "nxgenmeta"
+    ],
     "body": [
       "${TM_DIRECTORY}",
       "export ${2:async} function generateMetadata({ params }: { params: { ${1:array}: string } }) {",
@@ -37,9 +47,35 @@
     "description": "Generate a metadata for dynamic route"
   },
   "use client": {
-    "prefix": "uc",
-    "body": ["'use client'"],
+    "prefix": "ucli",
+    "body": [
+      "'use client'"
+    ],
     "description": "Add 'use client' directive"
+  },
+  "Add children props": {
+    "prefix": "children",
+    "body": [
+      "{",
+      "  children,",
+      "}:{",
+      "  children: React.ReactNode",
+      "}"
+    ],
+    "description": "Create a React Function Component that will not be exported"
+  },
+  "React Function Component not exported": {
+    "prefix": "rfcne",
+    "body": [
+      "function ${1:TM_FILENAME_BASE}({ $2 }) {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};"
+    ],
+    "description": "Create a React Function Component that will not be exported"
   },
   "React Function Component": {
     "prefix": "rfc2",
@@ -68,7 +104,35 @@
   },
   "Arguments of useTransition": {
     "prefix": "useTransition",
-    "body": ["const [isPending, startTransition] = "],
+    "body": [
+      "const [isPending, startTransition] = "
+    ],
     "description": "The basic array distructuring for useTransition"
+  },
+  "Next File Conventions: page.tsx": {
+    "prefix": "nfcp",
+    "body": [
+      "export default function Page({",
+      "  params,",
+      "  searchParams,",
+      "}: {",
+      "  params: { slug: string }",
+      "  searchParams: { [key: string]: string | string[] | undefined }",
+      "}) {",
+      "  return (",
+      "    <h1>",
+      "      ${1:My Page}",
+      "    </h1>",
+      "  )",
+      "}"
+    ],
+    "description": "Create a React Function Component"
+  },
+  "console log": {
+    "prefix": "cl",
+    "body": [
+      "console.log($1)"
+    ],
+    "description": "Basic console log"
   }
 }

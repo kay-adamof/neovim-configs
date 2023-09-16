@@ -1,7 +1,10 @@
 return {
-  options = {
-    g = {
-      icons_enabled = true,
+  lsp = {
+    formatting = {
+      timeout_ms = 7200,
+      disabled = {
+        "eslint_d",
+      },
     },
   },
   colorscheme = "catppuccin",
@@ -21,7 +24,6 @@ return {
       end,
     })
 
-    vim.o.foldlevelstart = 99 -- Foldings fully opened
     require "user.functions"
     require "user.keymaps"
     require "user.autocmds"

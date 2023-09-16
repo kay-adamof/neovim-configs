@@ -7,7 +7,7 @@ require "user.keymaps.escape"
 require "user.keymaps.global"
 -- require('keymaps.lspsaga')
 require "user.keymaps.misc"
-require "user.keymaps.moving-lines"
+-- require "user.keymaps.moving-lines"
 require "user.keymaps.navigate-window"
 -- require "user.keymaps.telescope"
 -- require('keymaps.nvimtree')

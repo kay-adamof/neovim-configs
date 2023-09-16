@@ -1,8 +1,9 @@
-vim.cmd([[
+vim.cmd [[
 augroup autowrite
   " Do not set "au!".That causes unwilling effect.
   " au!
-  autocmd InsertLeave,TextChanged,FocusLost * silent! write
+  " autocmd InsertLeave,TextChanged,FocusLost * silent! write
+  autocmd WinLeave,FocusLost * silent! write
   " https://stackoverflow.com/questions/2490227/how-does-vims-autoread-work
   autocmd FocusGained,BufEnter * :silent! !
   autocmd FocusGained,BufEnter * :silent!
@@ -14,11 +15,11 @@ augroup autowrite
 
 
   " File types
-  au BufNewFile,BufRead *.man                set filetype=man
-  au BufNewFile,BufRead *.term.log           set filetype=sh
+  " au BufNewFile,BufRead *.man                set filetype=man
+  " au BufNewFile,BufRead *.term.log           set filetype=sh
   " au BufNewFile,BufRead *.pde               set filetype=java
   " au BufNewFile,BufRead *.coffee-processing set filetype=coffee
   " au BufNewFile,BufRead Dockerfile*         set filetype=dockerfile
 
 augroup END
-]])
+]]

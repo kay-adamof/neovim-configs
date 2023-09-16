@@ -7,7 +7,7 @@ local al = AltLeader
 local source = "$XDG_CONFIG_HOME/nvim/init.lua"
 
 -- Close all windows and exit nvim
-map("n", al .. "w", ":qa!<cr>")
+-- map("n", al .. "w", ":qa!<cr>")
 -- Quit the current window
 map("n", al .. "c", "<C-w>q", silent)
 -- Close buffer
@@ -33,6 +33,6 @@ map("n", "<enter>", "i<cr><esc>", noremap)
 map("v", ";", "*", noremap)
 map("v", "+", "#", noremap)
 
-map("n", "gGY", ":let @+=expand('%:f')<CR>",noremap) -- Copoy absolute path
-map("n", "gY", ":let @+=expand('%:p')<CR>",noremap) -- Copy path
-map("n", "gy", ":let @+=expand('%:t')<CR>",noremap) -- Copy name
+map("n", "gGY", ":let @+=expand('%:f')<CR>", noremap) -- Copoy absolute path
+map("n", "gY", ":let @+=expand('%:p')<CR>", noremap) -- Copy path
+map("n", "gy", ":let @+=expand('%:t')<CR>", noremap) -- Copy name
