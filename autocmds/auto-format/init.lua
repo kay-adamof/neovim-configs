@@ -17,10 +17,10 @@ end ]]
 --   group = augroup,
 --   command = "! stylua %",
 -- })
-vim.api.nvim_create_augroup("format_on_leave", { clear = true })
+local group = vim.api.nvim_create_augroup("format_on_leave", { clear = true })
 vim.api.nvim_create_autocmd("InsertLeave", {
   desc = "Auto format before leave from insert-mode",
-  group = "format_on_leave",
+  group = group,
   pattern = { "*.tsx", "*.ts", "*.js", "*.jsx", "*.html", "*.md", "*.mdx", "*.yml" },
   command = "%!bunx prettier --stdin-filepath %",
 })
