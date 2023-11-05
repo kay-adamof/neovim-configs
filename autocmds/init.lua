@@ -4,4 +4,4 @@ require "user.autocmds.autowrite"
 require "user.autocmds.highlight-yank"
 -- require('autocmds.folding_with_treesitter')
 -- require('autocmds.format-after-insertleave')
-require("user.autocmds.auto-format")
+-- require("user.autocmds.auto-format")
