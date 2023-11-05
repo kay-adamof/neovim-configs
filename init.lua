@@ -1,6 +1,7 @@
 return {
   lsp = {
     formatting = {
+      format_on_save = false,
       timeout_ms = 7200,
       disabled = {
         "eslint_d",
