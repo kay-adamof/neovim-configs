@@ -1,8 +1,6 @@
 {
   "Generate Metadata": {
-    "prefix": [
-      "nxmiddleware"
-    ],
+    "prefix": ["nxmiddleware"],
     "body": [
       "import { NextResponse } from 'next/server'",
       "import type { NextRequest } from 'next/server'",
@@ -16,5 +14,10 @@
       "}"
     ],
     "description": "Generate a metadata for dynamic route"
+  },
+  "console log": {
+    "prefix": ["cl"],
+    "body": ["console.log($1)"],
+    "description": "Adds basic logging"
   }
 }

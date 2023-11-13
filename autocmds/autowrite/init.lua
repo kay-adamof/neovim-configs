@@ -3,10 +3,10 @@ augroup autowrite
   " Do not set "au!".That causes unwilling effect.
   " au!
   " autocmd InsertLeave,TextChanged,FocusLost * silent! write
-  autocmd WinLeave,FocusLost * silent! write
+  autocmd WinLeave,FocusLost,TabLeave,BufLeave * silent! write
   " https://stackoverflow.com/questions/2490227/how-does-vims-autoread-work
-  autocmd FocusGained,BufEnter * :silent! !
-  autocmd FocusGained,BufEnter * :silent!
+  autocmd WinLeave,FocusLost,TabLeave,BufLeave * :silent! !
+  autocmd WinLeave,FocusLost,TabLeave,BufLeave * :silent!
 
   autocmd InsertEnter,WinLeave * set nocursorline
   autocmd InsertLeave,WinEnter * set cursorline cursorlineopt=number,line

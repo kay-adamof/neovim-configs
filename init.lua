@@ -25,6 +25,7 @@ return {
       end,
     })
 
+    vim.g.VM_leader = "_"
     require "user.functions"
     require "user.keymaps"
     require "user.autocmds"

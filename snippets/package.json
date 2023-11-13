@@ -10,12 +10,11 @@
         "path": "./lua.json"
       },
       {
-        "language": "typescriptreact",
+        "language": [
+          "typescriptreact",
+          "typescript"
+        ],
         "path": "./typescriptreact.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./typescript.json"
       }
     ]
   }

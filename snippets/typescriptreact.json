@@ -1,7 +1,16 @@
 {
+  "Closed Component": {
+    "prefix": [
+      "</>"
+    ],
+    "body": [
+      "<$1 />"
+    ],
+    "description": "React closed component"
+  },
   "Fragment": {
     "prefix": [
-      "fragment"
+      "<></>"
     ],
     "body": [
       "<$1>",
@@ -47,7 +56,7 @@
     "description": "Generate a metadata for dynamic route"
   },
   "use client": {
-    "prefix": "ucli",
+    "prefix": "uc",
     "body": [
       "'use client'"
     ],
@@ -63,6 +72,23 @@
       "}"
     ],
     "description": "Create a React Function Component that will not be exported"
+  },
+  "React Arrow Function Component": {
+    "prefix": "rafc2",
+    "body": [
+      "import { ReactNode } from 'react'",
+      "",
+      "export const ${TM_FILENAME_BASE} = (props: {",
+      "  A: ReactNode",
+      "}) => {",
+      "  return (",
+      "    <>",
+      "      {props.A} ",
+      "    </>",
+      "  )",
+      "}"
+    ],
+    "description": "Create a React Arrow Function Component"
   },
   "React Function Component not exported": {
     "prefix": "rfcne",
@@ -110,7 +136,7 @@
     "description": "The basic array distructuring for useTransition"
   },
   "Next File Conventions: page.tsx": {
-    "prefix": "nfcp",
+    "prefix": "nextpage",
     "body": [
       "export default function Page({",
       "  params,",
@@ -129,10 +155,44 @@
     "description": "Create a React Function Component"
   },
   "console log": {
-    "prefix": "cl",
+    "prefix": "con",
     "body": [
       "console.log($1)"
     ],
     "description": "Basic console log"
+  },
+  "Import as namespace": {
+    "prefix": "importas",
+    "body": [
+      "import * as ${2:NAME} from '${1:@/}'"
+    ],
+    "description": "Imports as Namespace"
+  },
+  "export statement": {
+    "prefix": "export",
+    "body": [
+      "export * from '$1'"
+    ],
+    "description": "Exports modules as Namespace"
+  },
+  "RootLayout for Next js": {
+    "prefix": "nextroot",
+    "body": [
+      "export default function RootLayout({",
+      "  children,",
+      "}: {",
+      "  children: React.ReactNode",
+      "}) {",
+      "  return (",
+      "    <html",
+      "      lang='en'",
+      "    >",
+      "      <body>",
+      "        {children}",
+      "      </body>",
+      "    </html>",
+      "  )",
+      "}"
+    ]
   }
 }
