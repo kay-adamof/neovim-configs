@@ -33,6 +33,19 @@
     ],
     "description": "React Fragment"
   },
+  "Arrow Component": {
+    "prefix": [
+      "export"
+    ],
+    "body": [
+      "export const ${TM_FILENAME_BASE} = () => {",
+      "  return <>",
+      "    ",
+      "  </>",
+      "}"
+    ],
+    "description": "Generate component with arrow function"
+  },
   "Generate Metadata": {
     "prefix": [
       "nxgenmeta"
@@ -135,6 +148,13 @@
     ],
     "description": "The basic array distructuring for useTransition"
   },
+  "Zod types": {
+    "prefix": "zi",
+    "body": [
+      "type ${1} = z.infer<typeof ${1}>"
+    ],
+    "description": "Create type from zod inference"
+  },
   "Next File Conventions: page.tsx": {
     "prefix": "nextpage",
     "body": [
@@ -168,8 +188,29 @@
     ],
     "description": "Imports as Namespace"
   },
-  "export statement": {
-    "prefix": "export",
+  "Import libraries with namespace": {
+    "prefix": "il",
+    "body": [
+      "import * as L from '@/lib'"
+    ],
+    "description": "Import functions from libralies using Namespace"
+  },
+  "Import types with namespace": {
+    "prefix": "importT",
+    "body": [
+      "import * as T from '@/types'"
+    ],
+    "description": "Import typescript types with Namespace"
+  },
+  "Import React with namespace": {
+    "prefix": "import",
+    "body": [
+      "import * as R from 'react'"
+    ],
+    "description": "Import React with Namespace"
+  },
+  "export with barrel": {
+    "prefix": "e*f",
     "body": [
       "export * from '$1'"
     ],
