@@ -232,7 +232,7 @@ return {
       "<cmd>Telescope builtin<cr>",
       desc = "Find by Telescope",
     },
-    ["<leader>rr"] = {
+    ["<leader>rR"] = {
       "<Plug>RestNvim",
       desc = "Run rest-nvim under the current cursor position",
     },
