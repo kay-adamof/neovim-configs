@@ -185,31 +185,30 @@ return {
       "<cmd>Telescope current_buffer_fuzzy_find<cr>",
       desc = "FuzzyFind in current buffer",
     },
-    [";tt"] = {
-      function()
-        local Terminal = require("toggleterm.terminal").Terminal
-        local figterm = Terminal:new {
-          dir = "git_dir",
-          cmd = "figterm",
-          hidden = true,
-          direction = "horizontal",
-        }
-        return figterm:toggle()
-      end,
-      desc = "ToggleTerm Fig",
-    },
+    -- [";tt"] = {
+    --   function()
+    --     local Terminal = require("toggleterm.terminal").Terminal
+    --     local figterm = Terminal:new {
+    --       dir = "git_dir",
+    --       cmd = "figterm",
+    --       hidden = true,
+    --       direction = "horizontal",
+    --     }
+    --     return figterm:toggle()
+    --   end,
+    --   desc = "ToggleTerm Fig",
+    -- },
     [";tc"] = {
       function()
         local Terminal = require("toggleterm.terminal").Terminal
         local figterm = Terminal:new {
           dir = "%:p:h",
-          cmd = "figterm",
           hidden = true,
           direction = "horizontal",
         }
         return figterm:toggle()
       end,
-      desc = "ToggleTerm Fig in CWD",
+      desc = "Open horizontal terminal in the current file path directory",
     },
     [";tn"] = {
       function()
